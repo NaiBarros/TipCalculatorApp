@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -25,34 +25,59 @@
 
 <body>
   <main>
-    <div>
-      <section>
-        <form action="">
-          <label for="">
-            <h1>Bill</h1>
-          </label>
-          <input type="number">
-        </form>
+    <div class="containerMaior">
+      <section class="section1">
+
+        <label for="">
+          <h1>Bill</h1>
+        </label>
+        <input type="number">
+
         <h1>Select Tip %</h1>
         <ul class="botoes">
-          <li><button>5%</button></li>
-          <li><button>10%</button></li>
-          <li><button>15%</button></li>
-          <li><button>25%</button></li>
-          <li><button>50%</button></li>
-          <form action="">
-            <input type="number">
-          </form>
+          <li>
+            <button>5%</button>
+          </li>
+          <li>
+            <button>10%</button>
+          </li>
+          <li>
+            <button>15%</button>
+          </li>
+          <li>
+            <button>25%</button>
+          </li>
+          <li>
+            <button>50%</button>
+          </li>
+          <li>
+            <input type="number" placeholder="Custom">
+          </li>
         </ul>
-        <form action="">
-          <label for="">Number of People</label>
-          <input type="number">
-        </form>
+
+        <label for="">
+          <h1>Number of People</h1>
+        </label>
+        <input type="number">
+        <h1>Can't be zero</h1>
+
       </section>
       <section>
-        <h1>Tip Amount</h1>
-        <h2>/ person</h2>
-
+        <div>
+          <div>
+            <h1>Tip Amount</h1>
+            <h2>/ person</h2>
+          </div>
+          <strong>$ 0.00</strong>
+        </div>
+        <div>
+          <div>
+            <h1>Total</h1>
+            <h2>/ person</h2>
+          </div>
+          <strong>$ 0.00</strong>
+        </div>
+        <button>Reset</button>
       </section>
     </div>
   </main>
@@ -65,17 +90,15 @@
 
 
 
-  Custom
 
 
 
 
 
 
-  Total
-  / person
 
-  Reset
+
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
