@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -29,11 +32,14 @@
       <section class="section1">
 
         <label for="">
-          <h1>Bill</h1>
+          <h1 class="bill">Bill</h1>
         </label>
-        <input type="number">
+        <div class="input-container">
+          <img src="images/icon-dollar.svg" alt="cifrão">
+          <input type="number" class="input">
+        </div>
 
-        <h1>Select Tip %</h1>
+        <h1 class="select">Select Tip %</h1>
         <ul class="botoes">
           <li>
             <button>5%</button>
@@ -51,18 +57,24 @@
             <button>50%</button>
           </li>
           <li>
-            <input type="number" placeholder="Custom">
+            <input type="number" class="smallInput" placeholder="Custom">
           </li>
         </ul>
 
-        <label for="">
-          <h1>Number of People</h1>
-        </label>
-        <input type="number">
-        <h1>Can't be zero</h1>
+        <div>
+          <div class="number-of-people">
+            <label for="">
+              <h1>Number of People</h1>
+            </label>
+            <h1>Can't be zero</h1>
+          </div>
+          <input type="number" class="input">
 
+        </div>
       </section>
-      <section>
+
+
+      <section class="section2">
         <div>
           <div>
             <h1>Tip Amount</h1>
