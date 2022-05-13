@@ -27,6 +27,12 @@ main {
 }
 
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .containerMaior {
   padding: 40px;
   background-color: hsl(0, 0%, 100%);
@@ -34,6 +40,7 @@ main {
   border-radius: 25px;
   align-items: center;
   font-family: 'Space Mono', monospace;
+
 }
 
 
@@ -84,6 +91,11 @@ main {
 }
 
 
+strong {
+  font-size: 40px;
+  color: hsl(172, 67%, 45%);
+}
+
 .section2 button {
   width: 300px;
   height: 45px;
@@ -93,6 +105,12 @@ main {
   font-family: 'Space Mono', monospace;
   font-size: 20px;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(185, 41%, 84%);
 }
 
 
@@ -128,11 +146,15 @@ main {
   height: 45px;
   border-radius: 5px;
   border: 3px solid hsl(172, 67%, 45%);
-  padding-left: 25px;
+  padding: 0px 15px 0px 25px;
   text-align: right;
   font-family: 'Space Mono', monospace;
   font-size: 24px;
+  outline: none;
+}
 
+.input.input-error {
+  border-color: #f56565;
 }
 
 
@@ -142,9 +164,15 @@ main {
   border-radius: 5px;
   border: 3px solid hsl(172, 67%, 45%);
   font-family: 'Space Mono', monospace;
-  font-size: 24px;
+  font-size: 20px;
   text-align: right;
+  color: hsl(183, 100%, 15%);
+  outline: none;
+  padding: 0px 10px;
+}
 
+.smallInput::placeholder {
+  text-align: center;
 }
 
 
@@ -168,7 +196,13 @@ ul {
   color: hsl(189, 41%, 97%);
   font-family: 'Space Mono', monospace;
   font-size: 24px;
+  cursor: pointer;
+  border: none;
+}
 
+button:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
 }
 
 .select {
@@ -177,4 +211,25 @@ ul {
 
 .number-of-people {
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number-of-people label {
+  margin-bottom: 5px;
+}
+
+.number-of-people .error {
+  color: #f56565;
+  display: none;
+}
+
+.number-of-people .error.visible {
+  display: block;
+}
+
+.botoes button.tip-button.selected {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
 }
