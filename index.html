@@ -1,126 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
-</head>
-
-<body>
-  <main>
-    <div class="containerMaior">
-      <section class="section1">
-
-        <label for="">
-          <h1 class="bill">Bill</h1>
-        </label>
-        <div class="input-container">
-          <img src="images/icon-dollar.svg" alt="cifrão">
-          <input id="bill" type="number" class="input" min="0">
-        </div>
-
-        <h1 class="select">Select Tip %</h1>
-        <ul class="botoes">
-          <li>
-            <button class="tip-button" data-value="5" onclick="setTip(5)">5%</button>
-          </li>
-          <li>
-            <button class="tip-button" data-value="10" onclick="setTip(10)">10%</button>
-          </li>
-          <li>
-            <button class="tip-button" data-value="15" onclick="setTip(15)">15%</button>
-          </li>
-          <li>
-            <button class="tip-button" data-value="25" onclick="setTip(25)">25%</button>
-          </li>
-          <li>
-            <button class="tip-button" data-value="50" onclick="setTip(50)">50%</button>
-          </li>
-          <li>
-            <input id="custom" type="number" class="smallInput" placeholder="Custom">
-          </li>
-        </ul>
-
-        <div>
-          <div class="number-of-people">
-            <label for="">
-              <h1>Number of People</h1>
-            </label>
-            <h1 class="error" id="error">Can't be zero</h1>
-          </div>
+  <body>
+    <main>
+      <div class="containerMaior">
+        <section class="section1">
+          <label for="">
+            <h1 class="bill">Bill</h1>
+          </label>
           <div class="input-container">
-            <img src="images/icon-person.svg" alt="">
-            <input id="people" type="number" class="input">
+            <img src="images/icon-dollar.svg" alt="cifrão" />
+            <input id="bill" type="number" class="input" min="0" />
           </div>
-        </div>
-      </section>
 
+          <h1 class="select">Select Tip %</h1>
+          <ul class="botoes">
+            <li>
+              <button class="tip-button" data-value="5" onclick="setTip(5)">
+                5%
+              </button>
+            </li>
+            <li>
+              <button class="tip-button" data-value="10" onclick="setTip(10)">
+                10%
+              </button>
+            </li>
+            <li>
+              <button class="tip-button" data-value="15" onclick="setTip(15)">
+                15%
+              </button>
+            </li>
+            <li>
+              <button class="tip-button" data-value="25" onclick="setTip(25)">
+                25%
+              </button>
+            </li>
+            <li>
+              <button class="tip-button" data-value="50" onclick="setTip(50)">
+                50%
+              </button>
+            </li>
+            <li>
+              <input
+                id="custom"
+                type="number"
+                class="smallInput"
+                placeholder="Custom"
+                max="100"
+              />
+            </li>
+          </ul>
 
-      <section class="section2">
-        <div>
-          <div class="valores-container">
-            <div>
-              <h1>Tip Amount</h1>
-              <h2>/ person</h2>
+          <div>
+            <div class="number-of-people">
+              <label for="">
+                <h1>Number of People</h1>
+              </label>
+              <h1 class="error" id="error">Can't be zero</h1>
             </div>
-            <strong id="tip-amount">$0.00</strong>
-          </div>
-          <div class="valores-container">
-            <div>
-              <h1>Total</h1>
-              <h2>/ person</h2>
+            <div class="input-container">
+              <img src="images/icon-person.svg" alt="" />
+              <input id="people" type="number" class="input" />
             </div>
-            <strong id="total">$0.00</strong>
           </div>
-        </div>
-        <button>Reset</button>
-      </section>
+        </section>
+
+        <section class="section2">
+          <div>
+            <div class="valores-container">
+              <div>
+                <h1>Tip Amount</h1>
+                <h2>/ person</h2>
+              </div>
+              <strong id="tip-amount">$0.00</strong>
+            </div>
+            <div class="valores-container">
+              <div>
+                <h1>Total</h1>
+                <h2>/ person</h2>
+              </div>
+              <strong id="total">$0.00</strong>
+            </div>
+          </div>
+          <button onclick="resetValues()">Reset</button>
+        </section>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
     </div>
-  </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
